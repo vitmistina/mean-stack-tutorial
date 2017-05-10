@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mongodb": "~2.0",
+    "mocha": "~3.3"
+  },
+  "scripts": {
+    "start": "node node-app/index.js",
+    "test": "mocha node-app/test.js",
+    "test-kitten": "mocha -R nyan node-app/test.js"
+  }
+}

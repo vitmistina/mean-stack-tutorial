@@ -1,0 +1,15 @@
+version: "2"
+services:
+  my-mongo-db:
+    image: mongo
+    ports:
+      - "27017:27017"
+  my-nodejs-app:
+    build: .
+    image: mistivit/my-nodejs-app
+    command: echo 'ready'
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
